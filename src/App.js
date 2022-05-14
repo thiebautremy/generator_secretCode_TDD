@@ -1,7 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { javanais_generator } from "./services/functions";
 
 function App() {
+  console.log(javanais_generator("test phrase avec voyelles", "AVEC"));
   return (
     <div className="App">
       <header className="App-header">
