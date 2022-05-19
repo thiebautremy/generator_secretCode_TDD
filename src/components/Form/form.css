@@ -19,3 +19,20 @@ margin: auto;
 border: 1px solid rgba(255, 255, 255 ,0.18);
 padding: 2rem 5rem;
 }
+
+.fade-enter{
+    opacity: 0;
+ }
+ .fade-exit{
+    opacity: 1;
+ }
+ .fade-enter-active{
+    opacity: 1;
+ }
+ .fade-exit-active{
+    opacity: 0;
+ }
+ .fade-enter-active,
+ .fade-exit-active{
+    transition: opacity 500ms;
+ }

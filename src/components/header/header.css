@@ -1,0 +1,7 @@
+.header {
+    color: rgb(231, 219, 219);
+    line-height: 1.5rem;
+}
+.header p{
+    padding: 2rem 5rem;
+}
