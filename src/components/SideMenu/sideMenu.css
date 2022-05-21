@@ -1,0 +1,35 @@
+.side-menu {
+  position: relative;
+  height: 8rem;
+}
+
+/* Button speeddial */
+.side-menu button {
+  width: 30rem !important;
+  height: 11rem !important;
+  position: absolute;
+  left: -27rem;
+  border-radius: 0 1rem 1rem 0 !important;
+  background-color: black;
+  color: white;
+  border: none;
+  transition: left 0.8s ease-in-out;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side-menu button:hover{
+  left: 0rem !important;
+}
+
+.side-menu button p {
+  text-align: left;
+  padding-right: 0.5rem;
+}
+.side-menu button span {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
