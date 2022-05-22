@@ -4,7 +4,7 @@
 }
 
 /* Button speeddial */
-.side-menu button {
+.side-menu div.button {
   width: 30rem !important;
   height: 11rem !important;
   position: absolute;
@@ -14,22 +14,26 @@
   color: white;
   border: none;
   transition: left 0.8s ease-in-out;
-  color: white;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
-.side-menu button:hover{
+.side-menu div.open{
   left: 0rem !important;
 }
 
-.side-menu button p {
+.side-menu div p {
   text-align: left;
-  padding-right: 0.5rem;
+  padding: 0 0.5rem;
 }
-.side-menu button span {
-  padding: 0 1rem;
+.side-menu div span {
+  padding: 0 0.95rem;
   font-size: 1.5rem;
+}
+.side-menu div.divider {
+  border-left: 0.3rem solid white;
+  height: 100%;
 }
