@@ -57,3 +57,8 @@ text-align: center;
   background-color: #F28080;
   font-family: WorkSans;
 }
+
+#root {
+	width: 100vw;
+	height: 100vh;
+}

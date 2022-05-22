@@ -10,6 +10,8 @@ import { SwitchTransition, CSSTransition } from "react-transition-group";
 import { javanais_generator } from "../../services/functions";
 
 const Form = () => {
+  console.log(useSelector((state) => state));
+
   const phraseToChange = useSelector((state) => state.phrases.phraseToChange);
   const phraseToAdd = useSelector((state) => state.phrases.stringToAdd);
   const phraseJavanised = useSelector((state) => state.phrases.javanisedPhrase);
@@ -22,7 +24,7 @@ const Form = () => {
     );
   };
   return (
-    <main>
+    <main className="main">
       <form onSubmit={(e) => handleOnSubmit(e)}>
         <label htmlFor="phraseToChange">Phrase à Javaniser</label>
         <input
@@ -49,7 +51,7 @@ const Form = () => {
 
       <SwitchTransition>
         <CSSTransition
-          key={state ? "Goodbye, world!" : "Hello, world!"}
+          key={state}
           addEndListener={(node, done) =>
             node.addEventListener("transitionend", done, false)
           }

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   phraseToChange: "",
-  stringToAdd: "",
+  stringToAdd: "ja",
   javanisedPhrase: "",
 };
 

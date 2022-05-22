@@ -1,4 +1,15 @@
 .App {
   text-align: center;
   font-family: WorkSans;
+  position: relative;
+  height: 100%;
+}
+
+.sideMenuContainer {
+  position: absolute;
+  top: calc(50% - 15rem);
+  min-height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
