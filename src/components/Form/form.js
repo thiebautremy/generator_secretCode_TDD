@@ -10,8 +10,6 @@ import { javanais_generator } from "../../services/functions";
 import PhraseJavanised from "../PhraseJavanised/phraseJavanised";
 
 const Form = () => {
-  console.log(useSelector((state) => state));
-
   const phraseToChange = useSelector((state) => state.phrases.phraseToChange);
   const phraseToAdd = useSelector((state) => state.phrases.stringToAdd);
   const dispatch = useDispatch();
@@ -31,6 +29,7 @@ const Form = () => {
           value={phraseToChange}
           type="text"
           name="phraseToChange"
+          placeholder="Phrase à javaniser"
           onChange={(e) => dispatch(updatePhrase(e.target.value))}
         />
         <label htmlFor="textToAdd">Texte à ajouter</label>
