@@ -6,16 +6,14 @@ import {
   updatePhrase,
   updateJavanisedPhrase,
 } from "../../redux/phrasesSlice";
-import { SwitchTransition, CSSTransition } from "react-transition-group";
 import { javanais_generator } from "../../services/functions";
+import PhraseJavanised from "../PhraseJavanised/phraseJavanised";
 
 const Form = () => {
   console.log(useSelector((state) => state));
 
   const phraseToChange = useSelector((state) => state.phrases.phraseToChange);
   const phraseToAdd = useSelector((state) => state.phrases.stringToAdd);
-  const phraseJavanised = useSelector((state) => state.phrases.javanisedPhrase);
-  const [state, setState] = useState(true);
   const dispatch = useDispatch();
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +21,7 @@ const Form = () => {
       updateJavanisedPhrase(javanais_generator(phraseToChange, phraseToAdd))
     );
   };
+  const [state, setState] = useState(true);
   return (
     <main className="main">
       <form onSubmit={(e) => handleOnSubmit(e)}>
@@ -48,20 +47,7 @@ const Form = () => {
           Soumettre
         </button>
       </form>
-
-      <SwitchTransition>
-        <CSSTransition
-          key={state}
-          addEndListener={(node, done) =>
-            node.addEventListener("transitionend", done, false)
-          }
-          classNames="fade"
-        >
-          <div className="glassmorph">
-            {phraseJavanised && <p>{phraseJavanised}</p>}
-          </div>
-        </CSSTransition>
-      </SwitchTransition>
+      <PhraseJavanised state={state} />
     </main>
   );
 };
