@@ -5,14 +5,14 @@ import "./footer.css";
 const Footer = () => {
   return (
     <footer>
+      <a href="https://thiebautremy.netlify.app/">
+        <FaIdBadge />
+      </a>
       <a href="https://www.linkedin.com/in/remy-thiebaut/">
         <FaLinkedinIn />
       </a>
       <a href="https://github.com/thiebautremy">
         <FaGithub />
-      </a>
-      <a href="https://thiebautremy.netlify.app/">
-        <FaIdBadge />
       </a>
     </footer>
   );

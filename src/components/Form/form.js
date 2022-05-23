@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./form.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -11,12 +11,26 @@ import { javanais_generator } from "../../services/functions";
 const Form = (props) => {
   const phraseToChange = useSelector((state) => state.phrases.phraseToChange);
   const phraseToAdd = useSelector((state) => state.phrases.stringToAdd);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessageVisible, setErrorMessageVisible] = useState(false);
   const dispatch = useDispatch();
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    dispatch(
-      updateJavanisedPhrase(javanais_generator(phraseToChange, phraseToAdd))
-    );
+    if (phraseToChange === "") {
+      dispatch(updateJavanisedPhrase(javanais_generator("", "ja")));
+      setErrorMessage("Valeur de texte vide");
+      setErrorMessageVisible(true);
+    } else {
+      if (typeof phraseToChange !== "string") {
+        dispatch(updateJavanisedPhrase(javanais_generator("", "ja")));
+        setErrorMessage("Tu peux écrire une vraie phrase s'il te plaît 😉");
+        setErrorMessageVisible(true);
+      } else {
+        dispatch(
+          updateJavanisedPhrase(javanais_generator(phraseToChange, phraseToAdd))
+        );
+      }
+    }
   };
   return (
     <main className="main">
@@ -28,8 +42,14 @@ const Form = (props) => {
           type="text"
           name="phraseToChange"
           placeholder="Phrase à javaniser"
-          onChange={(e) => dispatch(updatePhrase(e.target.value))}
+          onChange={(e) => {
+            dispatch(updatePhrase(e.target.value));
+            setErrorMessageVisible(false);
+          }}
         />
+        {errorMessageVisible && (
+          <span className="errorMessage">{errorMessage}</span>
+        )}
         <label htmlFor="textToAdd">Texte à ajouter</label>
 
         <select
