@@ -8,7 +8,7 @@
   width: 30rem !important;
   height: 11rem !important;
   position: absolute;
-  left: -54.9rem;
+  left: -27rem;
   border-radius: 0 1rem 1rem 0 !important;
   background-color: black;
   color: white;
@@ -22,7 +22,7 @@
 }
 
 .side-menu div.open {
-  left: -28rem !important;
+  left: 0rem !important;
 }
 
 .side-menu div p {

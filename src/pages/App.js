@@ -11,15 +11,16 @@ function App() {
   console.log(javanais_generator("François Hollande", "av"));
   return (
     <div className="App">
+      <div className="sideMenuContainer">
+        <SideMenu />
+      </div>
       <div className="container">
         <section>
           <h1>Générateur Javanais...</h1>
         </section>
         <article>
           <Form state={state} setState={setState} />
-          <div className="sideMenuContainer">
-            <SideMenu />
-          </div>
+
           <PhraseJavanised state={state} />
         </article>
       </div>

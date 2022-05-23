@@ -173,6 +173,9 @@ button {
   transition: all 0.5s ease-in-out;
   padding: 1rem;
   margin: 2rem auto;
+  min-width: 10rem;
+  background-color: black;
+  color: white;
 }
 
 button:hover {
@@ -180,4 +183,6 @@ button:hover {
   color: #f28080;
   cursor: pointer;
 }
-/* TODO style sur focus input et select */
+label {
+  font-size: 1.2rem;
+}
