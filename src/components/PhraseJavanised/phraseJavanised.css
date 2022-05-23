@@ -1,31 +1,28 @@
 .glassmorph {
-    background: rgba( 255, 255, 255, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-padding: 2rem 10rem;
-position: absolute;
-bottom: 0;
-width: 30%;
-margin: auto;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem 10rem;
+  width: 30%;
+  margin: auto;
 }
 
-
-.fade-enter{
-    opacity: 0;
- }
- .fade-exit{
-    opacity: 1;
- }
- .fade-enter-active{
-    opacity: 1;
- }
- .fade-exit-active{
-    opacity: 0;
- }
- .fade-enter-active,
- .fade-exit-active{
-    transition: opacity 500ms;
- }
+.fade-enter {
+  opacity: 0;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-enter-active {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 500ms;
+}

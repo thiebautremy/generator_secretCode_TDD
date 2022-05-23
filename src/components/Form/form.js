@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./form.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -7,9 +7,8 @@ import {
   updateJavanisedPhrase,
 } from "../../redux/phrasesSlice";
 import { javanais_generator } from "../../services/functions";
-import PhraseJavanised from "../PhraseJavanised/phraseJavanised";
 
-const Form = () => {
+const Form = (props) => {
   const phraseToChange = useSelector((state) => state.phrases.phraseToChange);
   const phraseToAdd = useSelector((state) => state.phrases.stringToAdd);
   const dispatch = useDispatch();
@@ -19,7 +18,6 @@ const Form = () => {
       updateJavanisedPhrase(javanais_generator(phraseToChange, phraseToAdd))
     );
   };
-  const [state, setState] = useState(true);
   return (
     <main className="main">
       <form onSubmit={(e) => handleOnSubmit(e)}>
@@ -42,11 +40,10 @@ const Form = () => {
           <option value="ja">ja</option>
           <option value="av">av</option>
         </select>
-        <button type="submit" onClick={() => setState((state) => !state)}>
+        <button type="submit" onClick={() => props.setState(!props.state)}>
           Soumettre
         </button>
       </form>
-      <PhraseJavanised state={state} />
     </main>
   );
 };

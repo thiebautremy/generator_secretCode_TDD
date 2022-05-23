@@ -1,14 +1,12 @@
 .main {
-   top: calc(50% - 10rem);
-   position: absolute;
-   left: calc(50% - 15rem);
-   min-height: 20rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+  margin: auto;
+  width: 50rem;
+  min-height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main form {
-   max-width: 30rem;
+  /* max-width: 30rem; */
 }
-
