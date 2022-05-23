@@ -5,6 +5,27 @@
   min-height: 30rem;
 }
 
+.App .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.App .container section {
+  display: flex;
+  align-items: center;
+}
+
+.App .container h1 {
+  font-size: 4rem;
+  width: 15rem;
+  line-height: 7rem;
+  color: white;
+}
+
+.App .container article {
+  padding: 0 0 3rem;
+}
+
 .sideMenuContainer {
   position: absolute;
   top: calc(50% - 15rem);
