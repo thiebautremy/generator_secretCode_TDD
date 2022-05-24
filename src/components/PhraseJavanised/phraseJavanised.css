@@ -23,3 +23,9 @@
 .fade-exit-active {
   transition: opacity 500ms;
 }
+
+@media (max-width: 1300px) {
+  .glassmorph {
+    padding: 2rem 5rem;
+  }
+}

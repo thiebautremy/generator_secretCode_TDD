@@ -1,6 +1,6 @@
 .main {
   margin: auto;
-  width: 50rem;
+  width: 50%;
   min-height: 25rem;
   display: flex;
   flex-direction: column;
@@ -16,4 +16,10 @@
   padding: 0.2rem 2rem;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 1300px) {
+  .main {
+    width: 100%;
+  }
 }

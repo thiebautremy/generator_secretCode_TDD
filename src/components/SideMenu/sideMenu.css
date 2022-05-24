@@ -6,7 +6,7 @@
 /* Button speeddial */
 .side-menu div.button {
   width: 30rem !important;
-  height: 11rem !important;
+  /* height: 11rem !important; */
   position: absolute;
   left: -27rem;
   border-radius: 0 1rem 1rem 0 !important;
@@ -27,7 +27,7 @@
 
 .side-menu div p {
   text-align: left;
-  padding: 0 0.5rem;
+  padding: 0.5rem;
 }
 .side-menu div span {
   padding: 0 0.95rem;
@@ -35,5 +35,20 @@
 }
 .side-menu div.divider {
   border-left: 0.3rem solid white;
-  height: 100%;
+  height: 9rem;
+}
+
+@media (max-width: 1300px) {
+  .side-menu div.button {
+    width: 20rem !important;
+    left: -17rem;
+  }
+
+  .side-menu div.open {
+    background-color: black;
+  }
+
+  .side-menu div.divider {
+    height: 15rem;
+  }
 }

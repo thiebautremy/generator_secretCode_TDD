@@ -18,7 +18,7 @@ const Form = (props) => {
     e.preventDefault();
     if (phraseToChange === "") {
       dispatch(updateJavanisedPhrase(javanais_generator("", "ja")));
-      setErrorMessage("Valeur de texte vide");
+      setErrorMessage("Tu peux écrire une phrase s'il te plaît 😉");
       setErrorMessageVisible(true);
     } else {
       if (typeof phraseToChange !== "string") {
