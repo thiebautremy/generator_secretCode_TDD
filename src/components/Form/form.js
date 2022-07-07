@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./form.css";
+import "./form.scss";
 import { useSelector, useDispatch } from "react-redux";
 import {
   updateStringToAdd,
@@ -33,7 +33,7 @@ const Form = (props) => {
     }
   };
   return (
-    <main className="main">
+    <div className="form">
       <form onSubmit={(e) => handleOnSubmit(e)}>
         <label htmlFor="phraseToChange">Phrase à Javaniser</label>
         <input
@@ -64,7 +64,7 @@ const Form = (props) => {
           Soumettre
         </button>
       </form>
-    </main>
+    </div>
   );
 };
 export default Form;

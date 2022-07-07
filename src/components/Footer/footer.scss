@@ -8,15 +8,14 @@ footer {
   position: fixed;
   width: 100vw;
   bottom: 0;
-}
+  & a {
+    font-size: 2.5rem;
+    color: white;
+    transition: all 0.2s ease-in;
+  }
 
-footer a {
-  font-size: 2.5rem;
-  color: white;
-  transition: all 0.2s ease-in;
-}
-
-footer a:hover {
-  color: #f28080;
-  transform: scale(1.05);
+  & a:hover {
+    color: #f28080;
+    transform: scale(1.05);
+  }
 }

@@ -26,6 +26,6 @@ export const updatePhrases = createSlice({
 export const { updatePhrase, updateStringToAdd, updateJavanisedPhrase } =
   updatePhrases.actions;
 
-export const selectCount = (state) => state.counter.value;
+// export const selectCount = (state) => state.counter.value;
 
 export default updatePhrases.reducer;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
-import "./phraseJavanised.css";
+import "./phraseJavanised.scss";
 
 const PhraseJavanised = (props) => {
   const phraseJavanised = useSelector((state) => state.phrases.javanisedPhrase);
