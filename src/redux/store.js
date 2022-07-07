@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import updatePhrases from "./phrasesSlice";
+import javanais from "./javanaisSlice";
+import romanNumber from "./romanNumberSlice";
 
 export const store = configureStore({
   reducer: {
-    phrases: updatePhrases,
+    javanais,
+    romanNumber,
   },
 });

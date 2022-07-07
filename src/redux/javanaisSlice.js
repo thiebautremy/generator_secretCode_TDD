@@ -6,8 +6,8 @@ const initialState = {
   javanisedPhrase: "",
 };
 
-export const updatePhrases = createSlice({
-  name: "code_generator",
+export const javanais = createSlice({
+  name: "javanais",
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
@@ -24,8 +24,8 @@ export const updatePhrases = createSlice({
 });
 
 export const { updatePhrase, updateStringToAdd, updateJavanisedPhrase } =
-  updatePhrases.actions;
+  javanais.actions;
 
 // export const selectCount = (state) => state.counter.value;
 
-export default updatePhrases.reducer;
+export default javanais.reducer;

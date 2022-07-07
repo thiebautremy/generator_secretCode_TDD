@@ -4,7 +4,9 @@ import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./phraseJavanised.scss";
 
 const PhraseJavanised = (props) => {
-  const phraseJavanised = useSelector((state) => state.phrases.javanisedPhrase);
+  const phraseJavanised = useSelector(
+    (state) => state.javanais.javanisedPhrase
+  );
   return (
     <SwitchTransition>
       <CSSTransition

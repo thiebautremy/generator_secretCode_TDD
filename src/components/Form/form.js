@@ -5,12 +5,12 @@ import {
   updateStringToAdd,
   updatePhrase,
   updateJavanisedPhrase,
-} from "../../redux/phrasesSlice";
+} from "../../redux/javanaisSlice";
 import { javanais_generator } from "../../services/functions";
 
 const Form = (props) => {
-  const phraseToChange = useSelector((state) => state.phrases.phraseToChange);
-  const phraseToAdd = useSelector((state) => state.phrases.stringToAdd);
+  const phraseToChange = useSelector((state) => state.javanais.phraseToChange);
+  const phraseToAdd = useSelector((state) => state.javanais.stringToAdd);
   const [errorMessage, setErrorMessage] = useState("");
   const [errorMessageVisible, setErrorMessageVisible] = useState(false);
   const dispatch = useDispatch();
